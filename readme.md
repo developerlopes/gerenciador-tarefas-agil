@@ -46,8 +46,8 @@ Utilização do **Kanban**, com organização em três colunas:
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/seu-usuario/nome-do-repo.git
-   cd nome-do-repo
+   git clone https://github.com/developerlopes/gerenciador-tarefas-agil
+   cd gerenciador-tarefas-agil
 
 2. Crie um ambiente virtual (opcional, mas recomendado):
 
