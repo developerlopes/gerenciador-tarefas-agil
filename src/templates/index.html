@@ -1,0 +1,31 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<h2>Minhas Tarefas</h2>
+
+<form action="/add" method="post">
+    <input type="text" name="title" placeholder="Título" required>
+    <input type="text" name="description" placeholder="Descrição">
+    <button type="submit">Adicionar</button>
+</form>
+
+<table>
+    <tr>
+        <th>Título</th>
+        <th>Descrição</th>
+        <th>Status</th>
+        <th>Ações</th>
+    </tr>
+    {% for task in tasks %}
+    <tr>
+        <td>{{ task[1] }}</td>
+        <td>{{ task[2] }}</td>
+        <td>{{ task[3] }}</td>
+        <td>
+            <a href="/edit/{{ task[0] }}">Editar</a> |
+            <a href="/delete/{{ task[0] }}" onclick="return confirm('Tem certeza?')">Excluir</a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
